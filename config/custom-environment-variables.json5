@@ -1,0 +1,6 @@
+{
+    
+    db:"connectionString",
+    jwtkey:"secretKey"
+
+}

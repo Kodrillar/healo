@@ -1,0 +1,26 @@
+{
+  "name": "healo",
+  "version": "1.0.0",
+  "description": "RESTFul API for Healo app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "healo",
+    "hygiene",
+    "kids"
+  ],
+
+  "engines": {
+    "node": "15.11.0"
+  },
+  "author": "kodrillar",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.7",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.6",
+    "winston": "^3.4.0"
+  }
+}

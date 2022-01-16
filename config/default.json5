@@ -1,0 +1,6 @@
+{
+   port:9000,
+   db:"mongodb://localhost/healo",
+   jwtkey:"secretKey"
+   
+}
