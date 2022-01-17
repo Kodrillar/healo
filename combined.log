@@ -1,4 +1,7 @@
-undefined
-{"level":"info","message":"connected successfully"}
-{"level":"info","message":"connected successfully"}
-{"level":"info","message":"connected successfully"}
+{ message: 'db connection succeeded', level: 'info' }
+{ message: 'db connection succeeded', level: 'info' }
+{ message: 'db connection succeeded', level: 'info' }
+{ message: 'db connection succeeded', level: 'info' }
+{ message: 'db connection succeeded', level: 'info' }
+{ message: 'db connection succeeded', level: 'info' }
+{ message: 'db connection succeeded', level: 'info' }

@@ -1,6 +1,10 @@
-const dailyTips = require("../routes/dailyTips")
-
+const welcome = require("../routes/welcome")
+const error =  require("../middleware/error")
 
 module.exports = function(app){
-app.use("/dailytips", dailyTips)
+
+app.use("/", welcome)
+
+
+app.use(error)
 }

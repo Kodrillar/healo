@@ -6,6 +6,6 @@ const winston = require("winston")
 module.exports = function() {
 
     mongoose.connect(config.get("db"))
-     .then(db => winston.log({message:"connected successfully", level:"info"}) )
+     .then(db => winston.log({message:"db connection succeeded", level:"info"}))
     
 }
