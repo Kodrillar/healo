@@ -1,9 +1,29 @@
+
 const winston = require("winston");
 
 
 module.exports  = function(){
 
-    new winston.transports.File({filename:"errors.logs"});
+    const logger = winston.createLogger({
+        level:"info",
+
+        format: winston.format.colorize(),
+
+        transports:[
+            new winston.transports.File({filename:'error.log',level:"error"}),
+            new winston.transports.File({filename:'combined.log'})
+        ]
+
+    })
+
+    winston.add(logger)
+
+    if(process.env.NODE_ENV == "development"){
+        logger.add(new winston.transports.Console())
+    }
+
+    
+    
 
     process.on("uncaughtException", (err)=>{
         winston.log({level:"error",message:err.message})
