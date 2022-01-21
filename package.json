@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node index",
-    "dev" :"nodemon"
+    "start": "node app",
+    "dev": "nodemon app"
   },
   "keywords": [
     "healo",
@@ -21,6 +21,9 @@
   "dependencies": {
     "config": "^3.3.7",
     "express": "^4.17.2",
+    "joi": "^17.5.0",
+    "joi-objectid": "^4.0.2",
+    "lodash": "^4.17.21",
     "mongoose": "^6.1.6",
     "winston": "^3.4.0"
   },
