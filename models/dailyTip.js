@@ -28,5 +28,6 @@ function validateSchema(requestBody){
     return schema.validate(requestBody);
 }
 
-module.exports.dailyTipSchema = dailyTipSchema;
+//module.exports.dailyTipSchema = dailyTipSchema;
 module.exports.DailyTip = DailyTip;
+module.exports.validateSchema = validateSchema;
