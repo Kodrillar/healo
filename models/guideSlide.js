@@ -3,17 +3,35 @@ const mongoose = require("mongoose");
 
 
 const guideSlideSchema = new mongoose.Schema({
-    image:{
-        type:String,
-        required:true
-    },
-    
-    guideText:{
-        type:String,
-        required:true,
-        maxlength:255
+        guideSlides:[ 
+            {
+
+                guide: {
+                    image:{
+                        type:String,
+                        required:true
+                    },
+                        
+                    guideText:{
+                        type:String,
+                        required:true,
+                        maxlength:255
+                    
+                    }
+                    
+                }
+            }
+               
+            
+        ],
+        createdAt:{
+            type: Date,
+            default: Date.now()
+        }
+        
     }
-})
+    
+)
 
 const GuideSlide = mongoose.model("guideSlide", guideSlideSchema)
 
@@ -27,5 +45,6 @@ function validateSchema(requestBody){
     return schema.validate(requestBody)
 }
 
-module.exports.guideSlideSchema = guideSlideSchema;
+//module.exports.guideSlideSchema = guideSlideSchema;
 module.exports.GuideSlide = GuideSlide;
+module.exports.validateSchema = validateSchema;

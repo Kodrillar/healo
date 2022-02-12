@@ -17,15 +17,14 @@ router.post("/:id", validateObjectId, async (req, res)=>{
 
     suggestion = await suggestion.save();
 
-    _.find()
-
     return res.send(suggestion);
 
 })
 
 router.get("/:id", validateObjectId, async (req, res)=>{
 
-    const suggest = await Suggestion.findOne({suggestion:req.params.id})
+    const suggest = await Suggestion
+        .findOne({suggestion:req.params.id})
         .populate("suggestion");
     if(!suggest) return res.status(404).send("suggestion not found");
     

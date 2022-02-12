@@ -49,4 +49,12 @@ router.put("/:id",[
 
     res.send(updatedDailyTip);
 })
+
+
+router.delete("/:id", validateObjectId, async(req, res)=>{
+
+    const deletedDailyTip = await DailyTip.findOneAndDelete({_id:req.params.id});
+    if(!deletedDailyTip) return res.status(404).json({"message":"dailyTip not found"});
+    res.send(deletedDailyTip);
+})
 module.exports = router;

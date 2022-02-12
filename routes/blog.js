@@ -27,7 +27,8 @@ router.put("/:id",[
 async(req, res)=>{
 
     const updatedBlog = await Blog.findOneAndUpdate({_id:req.params.id},
-        {$set:{
+        {
+            $set:{
             
             title:req.body.title,
             postBy:req.body.postBy,
@@ -36,7 +37,10 @@ async(req, res)=>{
             blogPost:req.body.blogPost
 
             }
-        },{new:true}
+        },
+        {
+            new:true
+        }
     )
 
     return res.send(updatedBlog);
@@ -45,19 +49,20 @@ async(req, res)=>{
 
 router.delete("/:id", validateObjectId, async(req, res)=>{
 
-const deletedBlog = await Blog.findOneAndDelete({_id:req.params.id});
+    const deletedBlog = await Blog.findOneAndDelete({_id:req.params.id});
+    if(!deletedBlog) return res.status(404).json({"message":"Blog not found"})
 
-return res.send(deletedBlog);
+    return res.send(deletedBlog);
 
 
 })
 
 router.get("/:id",validateObjectId, async(req, res)=>{
 
-const blog = await Blog.findOne({_id:req.params.id})
-if(!blog) return res.status(404).send("blog not found");
+    const blog = await Blog.findOne({_id:req.params.id})
+    if(!blog) return res.status(404).send("blog not found");
 
-    return res.send(blog);
-})
+        return res.send(blog);
+    })
 
 module.exports = router;
