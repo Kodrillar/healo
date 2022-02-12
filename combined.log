@@ -933,3 +933,38 @@
 { message: 'db connection succeeded on port 7000', level: 'info' }
 { message: 'db connection succeeded on port 7000', level: 'info' }
 { message: 'db connection succeeded on port 7000', level: 'info' }
+{
+  level: 'error',
+  message: 'development is not defined development is not defined',
+  stack: 'ReferenceError: development is not defined\n' +
+    '    at /home/kdrillar/Desktop/healo/start/db.js:10:35\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)'
+}
+{
+  level: 'error',
+  message: 'development is not defined development is not defined',
+  stack: 'ReferenceError: development is not defined\n' +
+    '    at /home/kdrillar/Desktop/healo/start/db.js:10:35\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)'
+}
+{
+  message: 'db connection succeeded on port \n        7000',
+  level: 'info'
+}
+{
+  message: 'db connection succeeded on port \n        7000',
+  level: 'info'
+}
+{
+  message: 'db connection succeeded on port \n        undefined',
+  level: 'info'
+}
+{
+  message: 'db connection succeeded on port \n        undefined',
+  level: 'info'
+}
+{
+  message: 'db connection succeeded on port \n        7000',
+  level: 'info'
+}
+{ message: 'db connection succeeded on port 7000', level: 'info' }

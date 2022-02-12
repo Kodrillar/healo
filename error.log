@@ -779,3 +779,35 @@
     '    at Proxy._cast (/home/kdrillar/Desktop/healo/node_modules/mongoose/lib/types/DocumentArray/methods/index.js:84:17)\n' +
     '    at Proxy._mapCast (/home/kdrillar/Desktop/healo/node_modules/mongoose/lib/types/array/methods/index.js:258:17)'
 }
+{
+  level: 'error',
+  message: 'development is not defined development is not defined',
+  stack: 'ReferenceError: development is not defined\n' +
+    '    at /home/kdrillar/Desktop/healo/start/db.js:10:35\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)'
+}
+{
+  level: 'error',
+  message: 'development is not defined development is not defined',
+  stack: 'ReferenceError: development is not defined\n' +
+    '    at /home/kdrillar/Desktop/healo/start/db.js:10:35\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)'
+}
+{
+  errno: -5,
+  code: 'EIO',
+  syscall: 'write',
+  level: 'error',
+  message: 'write EIO write EIO',
+  stack: 'Error: write EIO\n' +
+    '    at afterWriteDispatched (node:internal/stream_base_commons:160:15)\n' +
+    '    at writeGeneric (node:internal/stream_base_commons:151:3)\n' +
+    '    at WriteStream.Socket._writeGeneric (node:net:795:11)\n' +
+    '    at WriteStream.Socket._write (node:net:807:8)\n' +
+    '    at writeOrBuffer (node:internal/streams/writable:390:12)\n' +
+    '    at _write (node:internal/streams/writable:331:10)\n' +
+    '    at WriteStream.Writable.write (node:internal/streams/writable:335:10)\n' +
+    '    at Console.log (/home/kdrillar/Desktop/healo/node_modules/winston/lib/winston/transports/console.js:79:23)\n' +
+    '    at Console._write (/home/kdrillar/Desktop/healo/node_modules/winston-transport/index.js:82:19)\n' +
+    '    at doWrite (/home/kdrillar/Desktop/healo/node_modules/readable-stream/lib/_stream_writable.js:409:139)'
+}
