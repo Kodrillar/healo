@@ -1,4 +1,4 @@
 {
-    db:"connectionString",
-    jwtkey:"secretKey"
+    db:"connectionString"
+  
 }

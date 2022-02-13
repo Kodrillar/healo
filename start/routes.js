@@ -6,6 +6,8 @@ const express = require("express")
 const suggestion = require("../routes/suggestion")
 const { urlencoded } = require("express")
 const guideSlide = require("../routes/guideSlide");
+const signUp = require("../routes/user");
+const signIn = require("../routes/auth");
 module.exports = function(app){
 
 app.use(urlencoded({extended:true}))
@@ -15,5 +17,7 @@ app.use("/api/blog", blog)
 app.use("/api/suggestion", suggestion);
 app.use("/api/dailyTip", dailyTip)
 app.use("/api/guideSlide", guideSlide);
+app.use("/api/signUp", signUp);
+app.use("/api/auth", signIn)
 app.use(error)
 }

@@ -1,6 +1,5 @@
 {
    port:7000,
-   db:"mongodb://localhost/healo",
-   jwtkey:"secretKey"
-   
+   db:"mongodb://localhost/healo"
+  
 }
