@@ -1,6 +1,7 @@
 
 const winston = require("winston");
-
+require("winston-mongodb");
+const config = require("config")
 
 module.exports  = function(){
 
@@ -12,6 +13,7 @@ module.exports  = function(){
         transports:[
             new winston.transports.File({filename:'error.log',level:"error"}),
             new winston.transports.File({filename:'combined.log'}),
+            new winston.transports.MongoDB({db:config.get("db")}),
             new winston.transports.Console()
         ]
 
