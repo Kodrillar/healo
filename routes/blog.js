@@ -7,12 +7,14 @@ const validateObjectId = require("../middleware/objectId")
 
 router.post('/', validate(validateSchema), async(req, res)=>{
 
+    const {title, postBy, image, duration, blogPost} = req.body;
+    
     let blog = new Blog({
-        title:req.body.title,
-        postBy:req.body.postBy,
-        image:req.body.image,
-        duration:req.body.duration,
-        blogPost:req.body.blogPost
+        title,
+        postBy,
+        image,
+        duration,
+        blogPost
     })
    
     blog = await blog.save();
